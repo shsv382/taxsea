@@ -12,7 +12,31 @@
 
   <body>
     <div class="container">
+    <nav>
+      <ul class="nav nav-pills">
+        
+        <li>      
+          <a href="<%= home_path %>"> 
+            <img alt="Brand" height="70px" src="<%= asset_path('logo.jpg') %>">
+          </a>
+        </li>
+        <li style="float: right;color:#333333" class="dropdown">
+            <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </button>
+          
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li class="dropdown-item"><%= link_to "Home", home_path %></li>
+              <li class="dropdown-item"><%= link_to "Help", help_path %></li>
+              <li class="dropdown-item"><%= link_to "About", about_path %></li>
+            </ul>
+        </li>
+      </ul>
+    </nav>
+
       <%= yield %>
     </div>
+
+
   </body>
 </html>
