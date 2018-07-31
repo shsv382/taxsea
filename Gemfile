@@ -5,12 +5,20 @@ ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3'
+  gem 'rspec-rails'
+end
+# Use PostgreSQL as the database for Active Record at production
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'bootstrap-sass'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -25,7 +33,11 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+ gem 'bcrypt', '~> 3.1.7'
+
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+gem 'jquery-turbolinks'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -60,3 +72,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Fake users creater
+gem 'faker'
+
+# Pagination
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
