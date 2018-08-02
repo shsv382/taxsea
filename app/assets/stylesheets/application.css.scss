@@ -25,8 +25,9 @@ $mediumblue: #50cce8;
 $white:      #ffffff;
 
 $darkblue_hover:  #1774b7;
-$lightblue_hover: #ddffff;
+$lightblue_hover: #eeffff;
 $darkblue_text:   #013051;
+$white_hover:     #f3faff;
 
 body {
 	color: $darkblue_text;
@@ -50,8 +51,8 @@ body {
 	color: $darkblue;
 	&:hover {
 		color: $darkblue;
-		border: 1px solid $lightblue_hover;
-		background-color: $lightblue_hover;
+		border: 1px solid $darkblue;
+		background-color: $white_hover;
 	}
 }
 
