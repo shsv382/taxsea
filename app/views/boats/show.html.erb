@@ -1,4 +1,9 @@
+<%= link_to '< назад', 'javascript:history.go(-1);' %>
+
+<%= link_to 'следующая >', Boat.find(@boat.id + 1) if Boat.exists?(@boat.id + 1) %>
+
 <h1><%= @boat.name %></h1>
+
 <div class="row">
 	<div class="col-xs-6">
 		<% if @boat.avatar.exists? %>
