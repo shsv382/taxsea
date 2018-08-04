@@ -1,3 +1,28 @@
 // Place all the styles related to the Boats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import "colors-variables";
+
+li.boat-unit {
+	list-style-type: none;
+	width: 90%;
+	margin: 10px auto;
+	padding: 10px;
+	background-color: $white_hover;
+	&:hover {
+		background-color: $lightblue_hover;
+	}
+}
+
+ul.boat-services, ul.boat-services > li {
+	list-style-type: none;
+	padding: 0; margin: 0;
+	list-style: none;
+}
+
+.mini-header {
+	font-weight: bold;
+	text-decoration: underline;
+}
