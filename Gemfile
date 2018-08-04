@@ -79,3 +79,6 @@ gem 'faker'
 # Pagination
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+
+# Using Paperclip for images upload and post-processing
+gem "paperclip", "~> 6.0"

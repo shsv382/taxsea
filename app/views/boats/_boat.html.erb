@@ -1,5 +1,8 @@
 <li class="boat-unit row">
-	<div class="col-xs-3 col-xs-offset-4">
+	<div class="col-xs-4">
+		<%= image_tag boat.avatar.url(:thumb) if boat.avatar.exists? %>
+	</div>
+	<div class="col-xs-3">
 		Name: <%= boat.name %><br>
 		Capacity: <%= boat.capacity %> persons
 	</div>
