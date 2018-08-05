@@ -1,0 +1,2 @@
+module MarinersHelper
+end

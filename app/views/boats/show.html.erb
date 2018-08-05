@@ -16,15 +16,46 @@
 		<% end %>
 	</div>
 	<div class="col-xs-3">
-		<span class="mini-header">Capacity:</span> <%= @boat.capacity %> persons
+		<span class="mini-header">Вместимость:</span> <%= @boat.capacity %> человек
 	</div>
 	<div class="col-xs-3">
-		<span class="mini-header">Services:</span>
+		<span class="mini-header">Услуги:</span>
 		<ul class="boat-services">
-			<li>Walking: $200 per hour</li>
-			<li>Fishing: $100 per hour</li>
-			<li>Celebrating: $1200 per night</li>
+			<li>Прогулки: $200 в час</li>
+			<li>Рыбалка: $100 в час</li>
+			<li>Торжества: от $1200 за вечер</li>
 		</ul>
 	</div>
-	
+</div>
+<br />
+<div class="row">	
+	<div class="col-xs-8">
+		<h3>Описание судна</h3>
+		<%= @boat.about %>
+	</div>
+	<div class="col-xs-4 mariner">
+		<h3>Судоводитель</h3>
+		<% if @mariner.avatar.exists? %>
+			<%= image_tag @mariner.avatar.url(:medium) %>
+		<% end %>
+		<br /><br />
+		<p>
+			<%= @mariner.name %>
+		</p>
+		<p>
+			<%= @mariner.birthdate %> г.р.
+		</p>
+		<p>
+			<%= @mariner.selfinfo %>
+		</p>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-xs-3 col-xs-offset-2">
+		<%= link_to "Забронировать", "#", class: "btn btn-primary", type: "button" %>
+	</div>
+	<div class="col-xs-3 col-xs-offset-2">
+		<a href="#" type="button" class="btn btn-default">Связаться</a>
+	</div>
 </div>
