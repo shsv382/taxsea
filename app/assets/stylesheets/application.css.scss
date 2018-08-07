@@ -62,3 +62,26 @@ a, .dropdown-item, .btn-link {
 .lightblue {
 	color: $lightblue;
 }
+
+.dropdown-menu > li > a {
+	color: $darkblue;
+	&:hover {
+		color: $darkblue;
+		background-color: $white_hover;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.container {
+		padding: 80px 20px;
+	}
+
+	.nav-container {
+		position: fixed;
+		width: 100%;
+		padding: 0 10px;
+		box-shadow: 1px 1px 5px 1px #dadada;
+		background-color: white;
+		z-index: 1000;
+	}
+}

@@ -28,9 +28,24 @@ ul.boat-services, ul.boat-services > li {
 }
 
 .mariner {
+	padding: 15px;
 	text-align: right;
+	background-color: $white_hover;
+	box-shadow: 1px 1px 5px 1px #dadada;
 }
 
 h3 {
 	margin-top: 0;
+}
+
+div.boat-services {
+	background-color: $white_hover;
+	height: 100%;
+	padding: 15px;
+	box-shadow: 1px 1px 5px 1px #dadada;
+}
+
+.boat-avatar {
+	display: block;
+	max-width: 100%;
 }

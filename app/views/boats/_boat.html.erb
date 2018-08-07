@@ -1,17 +1,17 @@
 <li class="boat-unit row">
-	<div class="col-xs-4">
+	<div class="col-md-4">
 		<%= image_tag boat.avatar.url(:thumb) if boat.avatar.exists? %>
 	</div>
-	<div class="col-xs-3">
+	<div class="col-md-3">
 		Name: <%= boat.name %><br>
 		Capacity: <%= boat.capacity %> persons
 	</div>
-	<ul class="col-xs-3 boat-services">
+	<ul class="col-md-3 boat-services">
 		<li>Walking: $200 per hour</li>
 		<li>Fishing: $100 per hour</li>
 		<li>Celebrating: $1200 per night</li>
 	</ul>
-	<div class="col-xs-2">
+	<div class="col-md-2">
 		<%= link_to "Смотреть", boat_path(boat.id), class: "btn btn-primary", type: "button" %>
 	</div>
 </li>
