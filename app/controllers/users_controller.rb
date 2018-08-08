@@ -1,4 +1,4 @@
-class MarinersController < ApplicationController
+class UsersController < ApplicationController
   def index
   end
 
@@ -9,14 +9,14 @@ class MarinersController < ApplicationController
   end
 
   def edit
-    @mariner = Mariner.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def update
-    @mariner = Mariner.find(params[:id])
-      if @mariner.update_attributes(mariner_params)
+    @user = User.find(params[:id])
+      if @user.update_attributes(user_params)
         flash[:success] = "Профиль обновлен!"
-        redirect_to @mariner.boat
+        redirect_to @user.own_boat
       else
         flash[:error] = "Введите корректные данные!"
         render 'edit'
@@ -30,7 +30,7 @@ class MarinersController < ApplicationController
   end
 
     private
-    def mariner_params
-      params.require(:mariner).permit(:name, :birthdate, :selfinfo, :avatar)
+    def user_params
+      params.require(:user).permit(:name, :birthdate, :selfinfo, :avatar)
     end
 end

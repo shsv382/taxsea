@@ -1,6 +1,6 @@
-<h1>Mariners#edit</h1>
+<h1>Users#edit</h1>
 <p>Find me in app/views/mariners/edit.html.erb</p>
-<%= form_for @mariner, :html => { multipart: true } do |f| %>
+<%= form_for @user, :html => { multipart: true } do |f| %>
 				<%= f.file_field :avatar %>
 				<%= f.submit "Upload" %>
 			<% end %>

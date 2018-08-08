@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_05_211442) do
+ActiveRecord::Schema.define(version: 2018_08_08_212640) do
 
   create_table "boats", force: :cascade do |t|
     t.string "name"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2018_08_05_211442) do
     t.integer "mariner_id"
   end
 
-  create_table "mariners", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name"
     t.date "birthdate"
     t.text "selfinfo"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2018_08_05_211442) do
     t.string "avatar_content_type"
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.boolean "mariner"
   end
 
 end
