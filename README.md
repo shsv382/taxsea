@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Idea of this project wasn't realized, but maybe you will find it interesting: it's an online boot-rent service, like Uber, but for SeaBoots
 
 Now here's not any useful information.
 
